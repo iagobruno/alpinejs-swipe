@@ -1,14 +1,11 @@
-# Alpine Plugin Template
+# alpinejs-swipe
 
-One short line about the plugin.
+AlpineJS custom directive to detect swipe gestures on an element.
 
-![GitHub tag (latest by date)](https://img.shields.io/github/v/tag/[repo]?label=version&style=flat-square)
-![GitHub file size in bytes](https://img.shields.io/github/size/[repo]/dist/[file].js?label=min%20%28no%20gzip%29&style=flat-square)
-[![Monthly downloads via CDN](https://data.jsdelivr.com/v1/package/gh/[repo]/badge)](https://www.jsdelivr.com/package/gh/[repo])
-
-## About
-
-A short bit of information about the plugin and what it does.
+[![npm](https://img.shields.io/npm/v/alpinejs-swipe)](https://www.npmjs.com/package/alpinejs-swipe)
+[![npm](https://img.shields.io/npm/dt/alpinejs-swipe)](https://www.npmjs.com/package/alpinejs-swipe)
+![npm bundle size](https://img.shields.io/bundlephobia/minzip/alpinejs-swipe)
+![Module system](https://img.shields.io/badge/module%20system-ESM%2C%20CJS%2C%20UMD-brightgreen)
 
 ## Installation
 
@@ -17,17 +14,58 @@ A short bit of information about the plugin and what it does.
 Include the following `<script>` tag in the `<head>` of your document:
 
 ``` html
-<script src="https://insert-cdn-link-here.com"></script>
+<script src="https://unpkg.com/alpinejs-swipe"></script>
 ```
 
 > **Important**: This must be added **before** loading Alpine.js when using CDN links.
 
-## Versioning
+### NPM
 
-This projects follow the [Semantic Versioning](https://semver.org/) guidelines.
+You can also install using a package manager.
+
+```
+npm install alpinejs-swipe
+yarn add alpinejs-swipe
+```
+
+And then register the plugin **before** `Alpine.start()`:
+
+```js
+import swipePlugin from "alpinejs-swipe";
+Alpine.plugin(swipePlugin);
+Alpine.start();
+```
+
+
+## Usage
+
+Just use the "x-swipe" directive with an expression and you'll be called back when the user swipes in the direction you want.
+
+```html
+<div x-swipe:down="console.log('SWIPED DOWN!')"></div>
+<div x-swipe:right="console.log('SWIPED RIGHT!')"></div>
+```
+
+You can also define a threshold with modifiers:
+
+```html
+<div x-swipe:down.threshold.200px="console.log('SWIPED DOWN!')"></div>
+```
+
+> _The default threshold is 50._
+
+If you want, it's also possible to be called back when the user swipes to any side, just omit the direction:
+
+```html
+<div x-swipe="console.log('SWIPED!')"></div>
+```
+
+> _In this case the direction will be passed to the function in the expression through the first argument._
+
+## Future ideas
+
+- Allow other gestures detection (like pan, doubletap and longpress) with https://github.com/sciactive/tinygesture.
 
 ## License
-
-Copyright (c) 2020 [author] and contributors
 
 Licensed under the MIT license, see [LICENSE.md](LICENSE.md) for details.

@@ -1,30 +1,28 @@
 {
-    "name": "alpine-plugin-template",
-    "description": "A simple template for Alpine.js plugins.",
+    "name": "alpinejs-swipe",
+    "description": "AlpineJS custom directive to detect swipe gestures on an element.",
+    "version": "0.1.0",
     "license": "MIT",
-    "author": "Ryan Chandler <support@ryangjchandler.co.uk>",
+    "author": "Iago Bruno",
     "repository": {
         "type": "git",
-        "url": "https://github.com/ryangjchandler/alpine-plugin-template"
+        "url": "https://github.com/iagobruno/alpinejs-swipe"
     },
-    "source": "src/index.js",
-    "main": "dist/alpine-plugin.js",
-    "umd:main": "dist/alpine-plugin.umd.js",
-    "module": "dist/alpine-plugin.module.js",
+    "source": "index.js",
+    "main": "dist/alpinejs-swipe.js",
+    "umd:main": "dist/alpinejs-swipe.umd.js",
+    "module": "dist/alpinejs-swipe.module.js",
+    "unpkg": "dist/alpinejs-swipe.umd.js",
     "scripts": {
         "build": "microbundle",
-        "watch": "microbundle watch",
-        "test": "jest"
+        "watch": "microbundle watch"
     },
     "dependencies": {
-        "alpinejs": "^2.6.0"
+        "alpinejs": "^2.6.0",
+        "swipe-detect": "^1.0.1"
     },
     "devDependencies": {
         "@babel/preset-env": "^7.11.0",
-        "@testing-library/dom": "^7.2.2",
-        "@testing-library/jest-dom": "^5.5.0",
-        "jest": "^25.4.0",
-        "jsdom-simulant": "^1.1.2",
         "microbundle": "^0.12.3"
     }
 }
