@@ -1,28 +1,26 @@
 {
     "name": "alpinejs-swipe",
     "description": "AlpineJS custom directive to detect swipe gestures on an element.",
-    "version": "0.1.0",
+    "version": "1.0.0",
     "license": "MIT",
     "author": "Iago Bruno",
     "repository": {
         "type": "git",
         "url": "https://github.com/iagobruno/alpinejs-swipe"
     },
-    "source": "index.js",
-    "main": "dist/alpinejs-swipe.js",
-    "umd:main": "dist/alpinejs-swipe.umd.js",
-    "module": "dist/alpinejs-swipe.module.js",
-    "unpkg": "dist/alpinejs-swipe.umd.js",
+    "main": "dist/module.js",
+    "module": "dist/module.module.js",
+    "unpkg": "dist/cjs.js",
     "scripts": {
-        "build": "microbundle",
-        "watch": "microbundle watch"
+        "build": "microbundle builds/{*}.js -f umd,esm",
+        "watch": "microbundle watch builds/{*}.js -f umd,esm"
     },
     "dependencies": {
-        "alpinejs": "^2.6.0",
-        "swipe-detect": "^1.0.1"
+        "alpinejs": "^2.6.0"
     },
     "devDependencies": {
         "@babel/preset-env": "^7.11.0",
-        "microbundle": "^0.12.3"
+        "microbundle": "^0.12.3",
+        "swipe-detect": "^1.0.1"
     }
 }

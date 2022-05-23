@@ -3,7 +3,6 @@
 AlpineJS custom directive to detect swipe gestures on an element.
 
 [![npm](https://img.shields.io/npm/v/alpinejs-swipe)](https://www.npmjs.com/package/alpinejs-swipe)
-[![npm](https://img.shields.io/npm/dt/alpinejs-swipe)](https://www.npmjs.com/package/alpinejs-swipe)
 ![npm bundle size](https://img.shields.io/bundlephobia/minzip/alpinejs-swipe)
 ![Module system](https://img.shields.io/badge/module%20system-ESM%2C%20CJS%2C%20UMD-brightgreen)
 
