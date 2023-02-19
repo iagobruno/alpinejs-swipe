@@ -9,7 +9,7 @@
         "url": "https://github.com/iagobruno/alpinejs-swipe"
     },
     "main": "dist/module.js",
-    "module": "dist/module.module.js",
+    "module": "dist/module.js",
     "unpkg": "dist/cjs.js",
     "scripts": {
         "build": "microbundle builds/{*}.js -f umd,esm",
