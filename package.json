@@ -1,7 +1,7 @@
 {
     "name": "alpinejs-swipe",
     "description": "AlpineJS custom directive to detect swipe gestures on an element.",
-    "version": "1.0.0",
+    "version": "1.0.2",
     "license": "MIT",
     "author": "Iago Bruno",
     "repository": {
